@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Diseño | Callejeritos Gonnet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__contenedor">
+      <a href="index.html" class="logo" aria-label="Inicio Callejeritos Gonnet">
+        <span class="logo__icono">🐾</span>
+        <span class="logo__texto">CG</span>
+      </a>
+
+      <nav class="barra-navegacion" aria-label="Navegación principal">
+        <ul class="barra-navegacion__lista">
+          <li><a href="quienes-somos.html" class="header_item">¿Quiénes somos?</a></li>
+          <li><a href="adopciones.html" class="header_item">Adopciones</a></li>
+          <li><a href="como-ayudar.html" class="header_item">Cómo ayudar</a></li>
+          <li><a href="agenda.html" class="header_item">Agenda</a></li>
+          <li><a href="contacto.html" class="header_item">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a href="como-ayudar.html#donar" class="btn-primario">¡Doná ahora!</a>
+    </div>
+  </header>
+
+  <main class="layout-principal">
+
+    <!-- Encabezado de documentación -->
+    <section class="seccion-grid sistema-encabezado">
+      <header class="sistema-encabezado__bloque">
+        <span class="etiqueta-caracteristica">Etapa 4 · Documentación Viva</span>
+        <h1>Sistema de Diseño · Callejeritos Gonnet</h1>
+        <p>Guía técnica de tokens visuales, escala tipográfica, espaciados, grilla responsiva y arquitectura atómica implementados en CSS nativo.</p>
+      </header>
+    </section>
+
+    <!-- 1. Paleta de colores -->
+    <section class="seccion-grid sistema-bloque" aria-labelledby="doc-colores">
+      <div class="sistema-bloque__cabecera">
+        <h2 id="doc-colores">1. Paleta de colores (Custom Properties)</h2>
+        <p>Tokens definidos en <code>:root</code> a partir de la Etapa 2.1 del proyecto.</p>
+      </div>
+
+      <div class="sistema-grilla-colores">
+        <article class="muestra-color">
+          <div class="muestra-color__swatch swatch--fondo"></div>
+          <div class="muestra-color__datos">
+            <code>--color-fondo</code>
+            <p>#FFF1D6 · Fondo principal y alternativo</p>
+          </div>
+        </article>
+
+        <article class="muestra-color">
+          <div class="muestra-color__swatch swatch--principal"></div>
+          <div class="muestra-color__datos">
+            <code>--color-principal</code>
+            <p>#FF9E3F · Títulos, header y footer</p>
+          </div>
+        </article>
+
+        <article class="muestra-color">
+          <div class="muestra-color__swatch swatch--principal-detalles"></div>
+          <div class="muestra-color__datos">
+            <code>--color-principal-detalles</code>
+            <p>#F78F0D · Detalles y palabras remarcadas</p>
+          </div>
+        </article>
+
+        <article class="muestra-color">
+          <div class="muestra-color__swatch swatch--acento"></div>
+          <div class="muestra-color__datos">
+            <code>--color-acento</code>
+            <p>#01BFB3 · Botones principales CTA</p>
+          </div>
+        </article>
+
+        <article class="muestra-color">
+          <div class="muestra-color__swatch swatch--acento-hover"></div>
+          <div class="muestra-color__datos">
+            <code>--color-acento-hover</code>
+            <p>#09EBDD · Estado hover de botones</p>
+          </div>
+        </article>
+
+        <article class="muestra-color">
+          <div class="muestra-color__swatch swatch--bordes"></div>
+          <div class="muestra-color__datos">
+            <code>--color-bordes-card</code>
+            <p>#FFD8AD · Bordes sutiles de tarjetas</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 2. Escala tipográfica -->
+    <section class="seccion-grid sistema-bloque" aria-labelledby="doc-tipografia">
+      <div class="sistema-bloque__cabecera">
+        <h2 id="doc-tipografia">2. Escala tipográfica</h2>
+        <p>Jerarquía construida con <strong>Quicksand</strong> para encabezados y <strong>Nunito</strong> para lectura continua.</p>
+      </div>
+
+      <div class="sistema-lista-tokens">
+        <div class="fila-token">
+          <div class="fila-token__meta">
+            <code>--texto-display</code>
+            <span>72px · H1 Hero</span>
+          </div>
+          <p class="ejemplo-display">Ellos nos necesitan</p>
+        </div>
+
+        <div class="fila-token">
+          <div class="fila-token__meta">
+            <code>--texto-titulo</code>
+            <span>48px · H2 Secciones</span>
+          </div>
+          <p class="ejemplo-titulo">Nuestros valores</p>
+        </div>
+
+        <div class="fila-token">
+          <div class="fila-token__meta">
+            <code>--texto-subtitulo</code>
+            <span>32px · H3 Subtítulos</span>
+          </div>
+          <p class="ejemplo-subtitulo">Comunidad</p>
+        </div>
+
+        <div class="fila-token">
+          <div class="fila-token__meta">
+            <code>--texto-titulocard / --texto-cta</code>
+            <span>28px · Títulos de card y CTA</span>
+          </div>
+          <p class="ejemplo-cta">¡Adoptá!</p>
+        </div>
+
+        <div class="fila-token">
+          <div class="fila-token__meta">
+            <code>--texto-parrafo</code>
+            <span>20px · Cuerpo de texto</span>
+          </div>
+          <p>Adoptar es mucho más que sumar una mascota: es regalarles una vida llena de cuidado, respeto y segundas oportunidades.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Escala de espaciados -->
+    <section class="seccion-grid sistema-bloque" aria-labelledby="doc-espaciados">
+      <div class="sistema-bloque__cabecera">
+        <h2 id="doc-espaciados">3. Escala de espaciados</h2>
+        <p>Ritmo espacial aplicado en grillas, márgenes internos y separación entre bloques.</p>
+      </div>
+
+      <div class="sistema-lista-tokens">
+        <div class="fila-espacio">
+          <code>--espaciado-columnas (8px)</code>
+          <div class="barra-espacio barra-espacio--columnas"></div>
+        </div>
+        <div class="fila-espacio">
+          <code>--espaciado-parrafos (16px)</code>
+          <div class="barra-espacio barra-espacio--parrafos"></div>
+        </div>
+        <div class="fila-espacio">
+          <code>--espaciado-paddingcomponentes (18px)</code>
+          <div class="barra-espacio barra-espacio--padding"></div>
+        </div>
+        <div class="fila-espacio">
+          <code>--espaciado-componentes (26px)</code>
+          <div class="barra-espacio barra-espacio--componentes"></div>
+        </div>
+        <div class="fila-espacio">
+          <code>--espaciado-secciones (34px)</code>
+          <div class="barra-espacio barra-espacio--secciones"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Átomos, Moléculas y Container Queries -->
+    <section class="seccion-grid sistema-bloque" aria-labelledby="doc-componentes">
+      <div class="sistema-bloque__cabecera">
+        <h2 id="doc-componentes">4. Inventario de componentes y Container Queries</h2>
+        <p>Muestras interactivas de átomos, etiquetas y tarjetas adaptables según el ancho de su contenedor.</p>
+      </div>
+
+      <div class="sistema-muestrario-atomos">
+        <button type="button" class="btn-primario">.btn-primario</button>
+        <button type="button" class="btn-secundario">.btn-secundario</button>
+        <span class="etiqueta-caracteristica">.etiqueta-caracteristica</span>
+        <span class="etiqueta-edad">.etiqueta-edad</span>
+      </div>
+
+      <div class="sistema-demo-container">
+        <div class="contenedor-card">
+          <article class="card-valor">
+            <span class="card-valor__icono" aria-hidden="true">🤝</span>
+            <div class="card-valor__contenido">
+              <h3>Tarjeta con @container</h3>
+              <p>Este componente cambia automáticamente de columna vertical (en contenedores angostos) a fila horizontal cuando su contenedor supera los 360px.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Estructura de Layout (CSS Grid) -->
+    <section class="seccion-grid sistema-bloque" aria-labelledby="doc-grid">
+      <div class="sistema-bloque__cabecera">
+        <h2 id="doc-grid">5. Sistema de grilla responsiva (Etapa 2.3)</h2>
+        <p>La estructura macro se adapta mediante CSS Grid en 3 puntos de corte: <strong>4 columnas</strong> en mobile (375px), <strong>8 columnas</strong> en tablet (768px) y <strong>12 columnas</strong> en desktop (1280px).</p>
+      </div>
+
+      <div class="demo-grilla-visual" aria-hidden="true">
+        <span class="demo-grilla-visual__celda">1</span>
+        <span class="demo-grilla-visual__celda">2</span>
+        <span class="demo-grilla-visual__celda">3</span>
+        <span class="demo-grilla-visual__celda">4</span>
+        <span class="demo-grilla-visual__celda">5</span>
+        <span class="demo-grilla-visual__celda">6</span>
+        <span class="demo-grilla-visual__celda">7</span>
+        <span class="demo-grilla-visual__celda">8</span>
+        <span class="demo-grilla-visual__celda">9</span>
+        <span class="demo-grilla-visual__celda">10</span>
+        <span class="demo-grilla-visual__celda">11</span>
+        <span class="demo-grilla-visual__celda">12</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contenedor">
+      <nav class="footer__enlaces" aria-label="Enlaces del pie de página">
+        <ul>
+          <li><a href="contacto.html">Contactanos</a></li>
+          <li><a href="como-ayudar.html">Colaborar</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="agenda.html">Agenda Gonnet</a></li>
+          <li><a href="sistema.html">Sistema de Diseño</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__redes">
+        <p>¡Seguinos en redes sociales!</p>
+        <div class="footer__iconos">
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="icono-redes" aria-label="Instagram">IG</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="icono-redes" aria-label="Facebook">FB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

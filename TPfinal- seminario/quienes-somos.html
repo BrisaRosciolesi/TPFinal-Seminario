@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Quiénes somos? | Callejeritos Gonnet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       ORGANISMO: .header
+       ========================================================= -->
+  <header class="header">
+    <div class="header__contenedor">
+      <a href="index.html" class="logo" aria-label="Inicio Callejeritos Gonnet">
+        <svg class="logo__svg" viewBox="0 0 110 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M22 36 L26 16 L32 10 L35 17 L41 19 L37 24 L47 21 L49 24 L38 29 L38 36 Z" fill="currentColor"/>
+          <path d="M63 36 L65 25 L61 21 L64 17 L68 19 L72 17 L74 22 L82 24 L86 14 L89 15 L85 27 L84 36 Z" fill="currentColor"/>
+          <rect x="16" y="36" width="78" height="76" stroke="currentColor" stroke-width="3.5"/>
+          <text x="55" y="88" text-anchor="middle" fill="currentColor" font-family="cursive, Georgia, serif" font-style="italic" font-size="44">CG</text>
+        </svg>
+      </a>
+
+      <nav class="barra-navegacion" aria-label="Navegación principal">
+        <ul class="barra-navegacion__lista">
+          <li><a href="quienes-somos.html" class="header_item header_item--activo" aria-current="page">¿Quiénes somos?</a></li>
+          <li><a href="adopciones.html" class="header_item">Adopciones</a></li>
+          <li><a href="como-ayudar.html" class="header_item">Cómo ayudar</a></li>
+          <li><a href="agenda.html" class="header_item">Agenda</a></li>
+          <li><a href="contacto.html" class="header_item">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a href="como-ayudar.html#donar" class="btn-primario">¡Doná ahora!</a>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       CONTENIDO PRINCIPAL (CSS GRID - 4 / 8 / 12 COLUMNAS)
+       ========================================================= -->
+  <main class="layout-principal">
+
+    <!-- BLOQUE 1: HERO DE QUIÉNES SOMOS + INDICADORES DE GALERÍA -->
+    <section class="seccion-grid quienes-somos">
+      <div class="quienes-somos__intro">
+        <h1>Amor, compromiso y trabajo en equipo</h1>
+        <p><strong>Callejeritos Gonnet</strong> es un proyecto solidario y sin fines de lucro nacido en nuestra comunidad con la misión de <strong>rescatar</strong> animales en situación de calle, <strong>acompañarlos</strong> en su recuperación y darles la oportunidad de encontrar una <strong>familia responsable</strong>.</p>
+        <p>Con el <strong>apoyo de los vecinos</strong>, trabajamos incansablemente para concientizar sobre el cuidado animal y demostrar que todos merecen un hogar lleno de amor.</p>
+      </div>
+
+      <div class="quienes-somos__imagen">
+        <figure class="galeria-quienes">
+          <img
+            src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=700&q=80"
+            alt="Perro rescatado por Callejeritos Gonnet"
+            class="galeria-quienes__foto"
+          >
+          <figcaption class="galeria-quienes__puntos" aria-label="Indicadores de galería">
+            <span class="punto-galeria punto-galeria--activo"></span>
+            <span class="punto-galeria"></span>
+            <span class="punto-galeria"></span>
+            <span class="punto-galeria"></span>
+            <span class="punto-galeria"></span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- BLOQUE 2: MÉTRICAS DE IMPACTO + HISTORIA Y LÍNEA DE TIEMPO (ADAPTADO A PALETA PDF) -->
+    <section class="seccion-grid bloque-impacto" aria-labelledby="titulo-trayectoria">
+      <!-- Fila superior de 4 métricas -->
+      <div class="metricas-superiores">
+        <article class="metrica-item">
+          <p class="metrica-item__numero">8</p>
+          <p class="metrica-item__etiqueta">Años de trayectoria</p>
+        </article>
+        <article class="metrica-item">
+          <p class="metrica-item__numero">+320</p>
+          <p class="metrica-item__etiqueta">Perros adoptados</p>
+        </article>
+        <article class="metrica-item">
+          <p class="metrica-item__numero">+180</p>
+          <p class="metrica-item__etiqueta">Gatos adoptados</p>
+        </article>
+        <article class="metrica-item">
+          <p class="metrica-item__numero">15</p>
+          <p class="metrica-item__etiqueta">Ingresos por mes</p>
+        </article>
+      </div>
+
+      <!-- Tarjeta principal de trayectoria y línea de tiempo -->
+      <div class="panel-historia">
+        <div class="panel-historia__superior">
+          <div class="panel-historia__texto">
+            <span class="badge-historia">🧡 QUIÉNES SOMOS</span>
+            <h2 id="titulo-trayectoria">Rescatando juntos. <span class="panel-historia__destaque">Sin parar.</span></h2>
+            <p>Empezamos en <strong>Gonnet</strong> y crecimos gracias a una red solidaria de vecinos. Sin refugio propio — trabajamos con hogares de tránsito, voluntarios y veterinarias de la zona que creen en lo mismo que nosotros.</p>
+          </div>
+
+          <div class="panel-historia__datos">
+            <article class="dato-destacado">
+              <span class="dato-destacado__cifra">+500</span>
+              <p>mascotas que encontraron su familia para siempre</p>
+            </article>
+            <article class="dato-destacado">
+              <span class="dato-destacado__cifra">$0</span>
+              <p>cobramos por cada adopción — siempre fue así, siempre lo será</p>
+            </article>
+            <article class="dato-destacado">
+              <span class="dato-destacado__cifra">100%</span>
+              <p>voluntarios — nadie cobra un sueldo por hacer esto</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Línea de tiempo de 5 hitos -->
+        <div class="linea-tiempo">
+          <p class="linea-tiempo__titulo">🐾 NUESTRA HISTORIA EN GONNET</p>
+          <ol class="linea-tiempo__lista">
+            <li class="hito-tiempo">
+              <span class="hito-tiempo__punto"></span>
+              <h3>2018</h3>
+              <p>Primeros rescates vecinales en Gonnet</p>
+            </li>
+            <li class="hito-tiempo">
+              <span class="hito-tiempo__punto"></span>
+              <h3>Red de tránsito</h3>
+              <p>Modelo solidario sin refugio propio</p>
+            </li>
+            <li class="hito-tiempo">
+              <span class="hito-tiempo__punto"></span>
+              <h3>Alianzas locales</h3>
+              <p>Canje de bolsas y Gallejeritas veganas</p>
+            </li>
+            <li class="hito-tiempo">
+              <span class="hito-tiempo__punto"></span>
+              <h3>Jornadas de salud</h3>
+              <p>Castraciones y vacunación junto al barrio</p>
+            </li>
+            <li class="hito-tiempo hito-tiempo--actual">
+              <span class="hito-tiempo__punto"></span>
+              <h3>Hoy — 2026</h3>
+              <p>Red activa en Gonnet y alrededores</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE 3: NUESTROS VALORES (FONDO NARANJA + 4 CARDS) -->
+    <section class="seccion-valores" aria-labelledby="titulo-valores">
+      <div class="seccion-grid seccion-valores__contenedor">
+        <h2 id="titulo-valores" class="titulo-centrado seccion-valores__titulo">Nuestros valores</h2>
+
+        <div class="cards-valores">
+          <div class="contenedor-card">
+            <article class="card-valor">
+              <span class="card-valor__icono" aria-hidden="true">🤝</span>
+              <div class="card-valor__contenido">
+                <h3>Vocación</h3>
+                <p>Trabajamos de forma voluntaria y constante para rescatar, cuidar y acompañar a cada callejerito de Gonnet hasta su recuperación.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="contenedor-card">
+            <article class="card-valor">
+              <span class="card-valor__icono" aria-hidden="true">💬</span>
+              <div class="card-valor__contenido">
+                <h3>Empatía</h3>
+                <p>Asistimos a perros y gatos por igual, sin importar su edad o condición física, brindándoles el cuidado especial que necesitan.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="contenedor-card">
+            <article class="card-valor">
+              <span class="card-valor__icono" aria-hidden="true">📣</span>
+              <div class="card-valor__contenido">
+                <h3>Comunidad</h3>
+                <p>Nos sostenemos gracias a las donaciones y aportes solidarios de la comunidad, rindiendo cuenta de cada recurso utilizado.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="contenedor-card">
+            <article class="card-valor">
+              <span class="card-valor__icono" aria-hidden="true">💚</span>
+              <div class="card-valor__contenido">
+                <h3>Cuidado</h3>
+                <p>Promovemos la tenencia responsable, las castraciones y el seguimiento cercano de cada adopción para garantizar hogares seguros.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE 4: CIERRE ILUSTRADO ("Ayudanos a seguir salvando vidas") -->
+    <section class="seccion-ilustrada" aria-labelledby="titulo-salvar-vidas">
+      <svg class="seccion-ilustrada__fondo" viewBox="0 0 1440 680" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,120 C220,160 280,380 120,540 L0,540 Z" fill="var(--color-bordes-card)" opacity="0.65"/>
+        <path d="M1440,80 C1180,140 1120,420 1320,560 L1440,560 Z" fill="var(--color-bordes-card)" opacity="0.65"/>
+        <path d="M0,610 Q360,550 720,610 T1440,580 L1440,680 L0,680 Z" fill="var(--color-principal)"/>
+        <ellipse cx="260" cy="615" rx="185" ry="26" fill="var(--color-acento)"/>
+      </svg>
+
+      <div class="seccion-grid seccion-ilustrada__grilla">
+        <div class="decoracion-superior" aria-hidden="true">
+          <span class="decoracion-icono decoracion-icono--naranja">🐾</span>
+          <span class="decoracion-icono decoracion-icono--turquesa">♥</span>
+          <span class="decoracion-icono decoracion-icono--borde">🦴</span>
+          <span class="decoracion-icono decoracion-icono--turquesa">✦</span>
+        </div>
+
+        <div class="seccion-ilustrada__contenido">
+          <h2 id="titulo-salvar-vidas">Ayudanos a seguir salvando vidas</h2>
+          <p><strong>Cada colaboración cuenta</strong> para darles un nuevo comienzo a los callejeritos que más lo necesitan. <strong>Tu ayuda es fundamental</strong> para que sigamos dándoles segundas oportunidades. Juntos, podemos demostrar que <strong class="texto-remarcado">el amor lo cambia todo.</strong></p>
+          <a href="como-ayudar.html" class="btn-primario">Colaborá ahora</a>
+        </div>
+
+        <div class="ilustracion-izquierda" aria-hidden="true">
+          <svg viewBox="0 0 320 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M62 195 C30 190 22 150 38 125 C45 114 40 100 32 95 C44 92 56 105 52 122 C44 148 52 175 72 182" stroke="var(--color-textonegro)" stroke-width="3" fill="var(--color-principal)"/>
+            <ellipse cx="105" cy="165" rx="34" ry="44" fill="var(--color-principal)" stroke="var(--color-textonegro)" stroke-width="3"/>
+            <circle cx="105" cy="108" r="32" fill="var(--color-principal)" stroke="var(--color-textonegro)" stroke-width="3"/>
+            <polygon points="78,86 84,58 102,78" fill="var(--color-principal)" stroke="var(--color-textonegro)" stroke-width="3"/>
+            <polygon points="132,86 126,58 108,78" fill="var(--color-principal)" stroke="var(--color-textonegro)" stroke-width="3"/>
+            <path d="M90 104 Q95 98 100 104" stroke="var(--color-textonegro)" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M110 104 Q115 98 120 104" stroke="var(--color-textonegro)" stroke-width="2.5" stroke-linecap="round"/>
+            <polygon points="102,112 108,112 105,116" fill="var(--color-principal-detalles)"/>
+            <path d="M97 119 Q105 126 113 119" stroke="var(--color-textonegro)" stroke-width="2.5" fill="none"/>
+            <ellipse cx="205" cy="172" rx="36" ry="40" fill="var(--color-principal-detalles)" stroke="var(--color-textonegro)" stroke-width="3"/>
+            <circle cx="195" cy="122" r="30" fill="var(--color-principal-detalles)" stroke="var(--color-textonegro)" stroke-width="3"/>
+            <ellipse cx="166" cy="120" rx="10" ry="22" transform="rotate(15 166 120)" fill="var(--color-textonegro)"/>
+            <ellipse cx="224" cy="120" rx="10" ry="22" transform="rotate(-15 224 120)" fill="var(--color-textonegro)"/>
+            <circle cx="185" cy="116" r="3.5" fill="var(--color-textonegro)"/>
+            <circle cx="205" cy="116" r="3.5" fill="var(--color-textonegro)"/>
+            <ellipse cx="195" cy="126" rx="6" ry="4" fill="var(--color-textonegro)"/>
+            <path d="M186 134 Q195 144 204 134" stroke="var(--color-textonegro)" stroke-width="2.5" fill="none"/>
+          </svg>
+        </div>
+
+        <div class="ilustracion-derecha" aria-hidden="true">
+          <svg viewBox="0 0 360 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 212 L52 184 L112 184 L124 212 Z" fill="var(--color-acento)" stroke="var(--color-textonegro)" stroke-width="3"/>
+            <path d="M56 184 Q82 168 108 184" fill="var(--color-principal-detalles)" stroke="var(--color-textonegro)" stroke-width="2.5"/>
+            <text x="82" y="204" text-anchor="middle" fill="var(--color-textonegro)" font-size="16">♡</text>
+            <ellipse cx="175" cy="188" rx="22" ry="24" fill="var(--color-bordes-card)" stroke="var(--color-textonegro)" stroke-width="2.5"/>
+            <circle cx="175" cy="156" r="20" fill="var(--color-bordes-card)" stroke="var(--color-textonegro)" stroke-width="2.5"/>
+            <polygon points="158,142 162,126 172,138" fill="var(--color-principal)" stroke="var(--color-textonegro)" stroke-width="2.5"/>
+            <polygon points="192,142 188,126 178,138" fill="var(--color-principal)" stroke="var(--color-textonegro)" stroke-width="2.5"/>
+            <circle cx="169" cy="154" r="2.5" fill="var(--color-textonegro)"/>
+            <circle cx="181" cy="154" r="2.5" fill="var(--color-textonegro)"/>
+            <ellipse cx="268" cy="146" rx="42" ry="32" transform="rotate(-20 268 146)" fill="var(--color-principal)" stroke="var(--color-textonegro)" stroke-width="3"/>
+            <circle cx="242" cy="96" r="28" fill="var(--color-principal)" stroke="var(--color-textonegro)" stroke-width="3"/>
+            <ellipse cx="268" cy="84" rx="11" ry="20" transform="rotate(-35 268 84)" fill="var(--color-textonegro)"/>
+            <path d="M228 92 Q233 86 238 92" stroke="var(--color-textonegro)" stroke-width="2.5"/>
+            <circle cx="222" cy="100" r="4.5" fill="var(--color-textonegro)"/>
+            <path d="M224 108 Q234 118 244 108" stroke="var(--color-textonegro)" stroke-width="2.5" fill="none"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       ORGANISMO: .footer
+       ========================================================= -->
+  <footer class="footer">
+    <div class="footer__contenedor">
+      <nav class="footer__enlaces" aria-label="Enlaces del pie de página">
+        <ul>
+          <li><a href="contacto.html">Contactanos</a></li>
+          <li><a href="como-ayudar.html">Colaborar</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="agenda.html">Agenda Gonnet</a></li>
+          <li><a href="sistema.html">Sistema de Diseño</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__redes">
+        <p>¡Seguinos en redes sociales!</p>
+        <div class="footer__iconos">
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="icono-redes" aria-label="Instagram">IG</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="icono-redes" aria-label="Facebook">FB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
